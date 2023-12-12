@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+:root {
+    /* Color palette */
+    --primary-text-color: #60423A;
+    --dark-text-color: #F7ECE4;
+    --background-color-dark: #60423A;
+    --background-color-light: #F7ECE4;
+    --button-primary-bg: #60423A;
+    --button-primary-hover: #3F2A26;
+    --button-primary-bg-dark-mode: #F7ECE4;
+    --buton-primary-bg-dark-hover: #DDC6B8;
+    --button-primary-text-dark-mode: #282c35;
+    --theme-switch-bg: #ccc;
+    --slider-bg: #282c35;
+    --slider-bg-checked: #282c35;
+    --slider-bg-unchecked: #F7ECE4;
+    --slider-knob-bg: #F7ECE4;
+    --icon-color: #60423A;
+    --icon-moon-color: #60423A;
+    --font-family: 'Noto Serif', serif;
+
+    /* Border radius */
+    --border-radius: 0.5rem;
+}
+
+html, body {
+    height: 100%;
+    margin: 0; /* Reset default margin */
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--primary-text-color);
+    background-color: var(--background-color-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum height of 100% of the viewport height */
+}
+
+.main-content {
+    flex: 1; /* This makes the content grow to occupy available space, pushing the footer down */
+}
+
+.hero-banner {
+    background: url('../img/hero.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 50px 0;
+    text-align: center;
+    color: white; /* or any color that suits your design */
+}
+
+/* Additional styling for the title inside the hero banner */
+.hero-banner h1 {
+    font-size: 2.5em;
+    color: #FFF;
+    /* Any additional styling for the title */
+}
+
+
+.nav-tabs .nav-link {
+    border-radius: var(--border-radius);
+    margin-right: var(--border-radius);
+    color: var(--background-color-dark);
+    border: 2px solid var(--background-color-dark);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: var(--button-primary-hover);
+    border: 2px solid var(--background-color-dark);
+    color: var(--background-color-light);
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--background-color-dark);
+    color: var(--background-color-light);
+}
+
+
+.dark-mode .nav-tabs .nav-link {
+    border-radius: var(--border-radius);
+    margin-right: var(--border-radius);
+    color: var(--background-color-light);
+    border: 2px solid var(--background-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .nav-tabs .nav-link:hover {
+    background-color: var(--buton-primary-bg-dark-hover);
+    border: 2px solid var(--background-color-light);
+    color: var(--background-color-dark);
+}
+
+.dark-mode .nav-tabs .nav-link.active {
+    background-color: var(--background-color-light);
+    color: var(--background-color-dark);
+}
+
+.form-control {
+    border-radius: var(--border-radius);
+}
+
+.btn-primary {
+    background-color: var(--button-primary-bg);
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.btn-primary:hover {
+    background-color: var(--button-primary-hover);
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--slider-bg);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: var(--slider-knob-bg);
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: var(--slider-bg-checked);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--dark-text-color);
+}
+
+.dark-mode .btn-primary {
+    background-color: var(--button-primary-bg-dark-mode);
+    color: var(--button-primary-text-dark-mode);
+    border-radius: var(--border-radius);
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: var(--buton-primary-bg-dark-hover);
+}
+
+.theme-switch .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--icon-color);
+    font-size: 12px;
+}
+
+.theme-switch .sun {
+    left: 5px;
+}
+
+.theme-switch .moon {
+    right: 5px;
+    color: var(--background-color-light);
+}
+
+input:checked + .slider .moon {
+    color: var(--icon-moon-color);
+}
+
+input:checked + .slider .sun {
+    color: var(--icon-sun-color);
+}
+
+.centered-image {
+    display: none;      /* Initially hidden */
+    max-width: 100%;    /* Maximum width */
+    height: auto;       /* Automatic height for aspect ratio */
+    margin: 0 auto;     /* Centering horizontally */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--buton-primary-bg-dark-hover);
+    color: var(--background-color-dark);
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+.footer a:hover {
+    text-decoration: underline
+}
+
+.footer i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
