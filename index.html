@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Compatibility Test</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="hero-banner">
+        <h1 class="text-center mb-4">Zodiac Compatibility Test</h1>
+    </div>
+    <div class="container mt-5 main-content">
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <span class="icon sun"><i class="fa-regular fa-sun"></i></span>
+                    <span class="icon moon"><i class="fa-regular fa-moon"></i></span>
+                </div>
+            </label>
+        </div>
+        
+
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="compatibility-tab" data-toggle="tab" href="#compatibility" role="tab" aria-controls="compatibility" aria-selected="true">Compatibility Test</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="direct-compatibility-tab" data-toggle="tab" href="#direct-compatibility" role="tab" aria-controls="direct-compatibility" aria-selected="false">Direct Compatibility</a>
+            </li>
+        </ul>
+        <main>
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Compatibility Test Tab -->
+            <div class="tab-pane fade show active" id="compatibility" role="tabpanel" aria-labelledby="compatibility-tab">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="sign">Your Zodiac Sign:</label>
+                            <select id="sign" class="form-control" onchange="checkCompatibility()">
+                                <option value="Aries">Aries</option>
+                                <option value="Taurus">Taurus</option>
+                                <option value="Gemini">Gemini</option>
+                                <option value="Cancer">Cancer</option>
+                                <option value="Leo">Leo</option>
+                                <option value="Virgo">Virgo</option>
+                                <option value="Libra">Libra</option>
+                                <option value="Scorpio">Scorpio</option>
+                                <option value="Sagittarius">Sagittarius</option>
+                                <option value="Capricorn">Capricorn</option>
+                                <option value="Aquarius">Aquarius</option>
+                                <option value="Pisces">Pisces</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compatibility Result Section -->
+                <div class="row justify-content-center mt-4">
+                    <!-- Most Compatible -->
+                    <div class="col-md-4 text-center">
+                        <h4>Most Compatible</h4>
+                        <p id="mostCompatibleResult" class="lead"></p>
+                        <img id="mostCompatibleImage" src="img/high.png" alt="High compatibility indicator" class="centered-image">
+                    </div>
+                    <!-- Also Compatible -->
+                    <div class="col-md-4 text-center">
+                        <h4>Also Compatible</h4>
+                        <p id="alsoCompatibleResult" class="lead"></p>
+                        <img id="alsoCompatibleImage" src="img/medium.png" alt="Medium compatibility indicator" class="centered-image">
+                    </div>
+                    <!-- Less Compatible -->
+                    <div class="col-md-4 text-center">
+                        <h4>Less Compatible</h4>
+                        <p id="lessCompatibleResult" class="lead"></p>
+                        <img id="lessCompatibleImage" src="img/low.png" alt="Low compatibility indicator" class="centered-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Direct Compatibility Tab -->
+            <div class="tab-pane fade" id="direct-compatibility" role="tabpanel" aria-labelledby="direct-compatibility-tab">
+                <div class="row justify-content-center mt-4">
+                    <!-- First Zodiac Sign -->
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="sign1-direct">First Zodiac Sign:</label>
+                            <select id="sign1-direct" class="form-control">
+                                <option value="Aries">Aries</option>
+                                <option value="Taurus">Taurus</option>
+                                <option value="Gemini">Gemini</option>
+                                <option value="Cancer">Cancer</option>
+                                <option value="Leo">Leo</option>
+                                <option value="Virgo">Virgo</option>
+                                <option value="Libra">Libra</option>
+                                <option value="Scorpio">Scorpio</option>
+                                <option value="Sagittarius">Sagittarius</option>
+                                <option value="Capricorn">Capricorn</option>
+                                <option value="Aquarius">Aquarius</option>
+                                <option value="Pisces">Pisces</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Second Zodiac Sign -->
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="sign2-direct">Second Zodiac Sign:</label>
+                            <select id="sign2-direct" class="form-control">
+                                <option value="Aries">Aries</option>
+                                <option value="Taurus">Taurus</option>
+                                <option value="Gemini">Gemini</option>
+                                <option value="Cancer">Cancer</option>
+                                <option value="Leo">Leo</option>
+                                <option value="Virgo">Virgo</option>
+                                <option value="Libra">Libra</option>
+                                <option value="Scorpio">Scorpio</option>
+                                <option value="Sagittarius">Sagittarius</option>
+                                <option value="Capricorn">Capricorn</option>
+                                <option value="Aquarius">Aquarius</option>
+                                <option value="Pisces">Pisces</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Check Compatibility Button -->
+                <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <button onclick="checkDirectCompatibility()" class="btn btn-primary btn-block">Check Compatibility</button>
+                        </div>
+                </div>
+                    
+                <!-- Direct Compatibility Result -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-8 text-center">
+                        <p id="directCompatibilityResult" class="lead"></p>
+                        <img id="directCompatibilityImage" src="img/direct.png" alt="Direct compatibility result" class="centered-image">
+                        <!-- Additional image for no significant compatibility -->
+                        <img id="noSignificantCompatibilityImage" src="img/none.png" alt="No significant compatibility indicator" class="centered-image">    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container p-4">
+            <a class="text-dark" href="https://github.com/igordinuzzi" target="_blank" aria-label="Visit Igor's GitHub profile">
+                <i class="fa-brands fa-github"></i> Made by Igor
+            </a>
+        </div>
+    </footer>
+    
+    <!-- Include Bootstrap JS and its dependencies (jQuery and Popper) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script/compatibility.js"></script>
+</body>
+</html>
