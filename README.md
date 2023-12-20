@@ -1,4 +1,25 @@
-# README for Zodiac Compatibility Test Project
+# Zodiac Compatibility Test Project
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Main Components](#main-components)
+- [Key Functions](#key-functions)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Compatibility Logic](#compatibility-logic)
+- [Learning Outcomes](#learning-outcomes)
+- [User Stories](#user-stories)
+- [Design Elements](#design-elements)
+- [User Flow](#user-flow)
+- [Task Flow](#task-flow)
+- [Usability Testing](#usability-testing)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
 
 ## Introduction
 Welcome to the "Zodiac Compatibility Test" project! This interactive web application lets users check their zodiac compatibility with others in a fun and engaging way.
@@ -9,30 +30,16 @@ Welcome to the "Zodiac Compatibility Test" project! This interactive web applica
 - **Theme Switch**: A light and dark mode toggle for user convenience.
 - **Responsive Design**: The application is built using Bootstrap, ensuring a responsive layout on various devices.
 
-### Main Components
-1. **Event Listeners**: The script sets up event listeners that trigger functions when certain actions occur in the browser. For instance, it listens for changes in the zodiac sign selections and the theme switch toggle.
+## Main Components
+1. **Event Listeners**: Sets up event listeners that trigger functions for user actions.
+2. **Compatibility Logic**: Determines zodiac compatibility using a predefined object.
+3. **Dynamic Content Update**: Dynamically updates the webpage content based on user interactions.
 
-2. **Compatibility Logic**: The core of this application lies in its ability to determine zodiac compatibility. This is implemented through a predefined object called `compatibility`, which maps each zodiac sign to its most, also, and least compatible signs.
-
-3. **Dynamic Content Update**: The script dynamically updates the content of the webpage based on user interactions, such as selecting zodiac signs or toggling the theme.
-
-### Key Functions
-1. **`checkCompatibility()`**: This function is triggered when a user selects a zodiac sign in the "Compatibility Test" tab. It retrieves the user's selected sign and updates the compatibility results accordingly.
-
-2. **`displayResults(category, sign)`**: It's a helper function used by `checkCompatibility()` to update the text and images for the compatibility results. It takes the category (most, also, or less compatible) and the selected zodiac sign as parameters.
-
-3. **`checkDirectCompatibility()`**: Used in the "Direct Compatibility" tab, this function checks the compatibility between two selected zodiac signs. It determines if the chosen signs are highly compatible, compatible, or less compatible, and updates the display accordingly.
-
-4. **Theme Toggle**: The theme switch event listener changes the webpage's theme (light or dark) based on the user's preference. This is a nice touch for enhancing user experience.
-
-### Debugging and Validation
-- The script includes a `console.log` statement within `checkDirectCompatibility()` for debugging purposes. This logs the compatibility results to the console, which can be useful during development and troubleshooting.
-
-### Interactivity and User Feedback
-- The script makes the web application interactive by providing real-time feedback. When a user selects a zodiac sign, the compatibility results are immediately displayed without needing to reload the page.
-
-### Conclusion
-The JavaScript code in this project effectively combines event handling, DOM manipulation, and conditional logic to create an engaging and responsive user experience. It's a good example of how JavaScript can be used to add interactivity and dynamic content to a web page.
+## Key Functions
+1. **`checkCompatibility()`**: Retrieves user's selected sign and updates compatibility results.
+2. **`displayResults(category, sign)`**: Helper function to update text and images for compatibility results.
+3. **`checkDirectCompatibility()`**: Checks the compatibility between two selected zodiac signs.
+4. **Theme Toggle**: Changes the webpage's theme based on user preference.
 
 ## Technologies Used
 - HTML5
@@ -41,24 +48,63 @@ The JavaScript code in this project effectively combines event handling, DOM man
 - FontAwesome for icons
 
 ## Setup and Installation
-To get started with this project, follow these steps:
+To get started with this project:
 1. Clone the repository.
-2. Open the `index.html` file in a web browser.
-3. No additional installation is required, as the project uses CDN links for Bootstrap and FontAwesome.
+2. Open `index.html` in a web browser.
+3. No additional installation required.
 
 ## Usage
-- Select your zodiac sign in the "Compatibility Test" tab to see compatibility results.
-- Use the "Direct Compatibility" tab to compare two zodiac signs directly.
-- Switch between light and dark mode using the theme toggle at the top.
+- Use "Compatibility Test" tab to see compatibility results.
+- Use "Direct Compatibility" tab for direct sign comparison.
+- Toggle between light and dark mode.
 
 ## Compatibility Logic
-The compatibility logic is defined in `compatibility.js`. Zodiac signs are categorized into 'most compatible', 'also compatible', and 'less compatible' groups based on common astrological beliefs.
+Defined in `compatibility.js`, categorizes zodiac signs into compatible groups.
+
+## Learning Outcomes
+As a student, this project was a valuable learning experience in web development. I gained hands-on experience with HTML, CSS, JavaScript, and responsive design. The project improved my understanding of user experience, interactive design, and dynamic content creation. I also learned about the importance of clean, maintainable code and the use of version control systems like Git.
+
+## User Stories
+1. **Astrology Enthusiast**: Wants an easy way to check compatibility with friends and potential partners based on zodiac signs.
+2. **Casual Browser**: Looks for an entertaining and visually appealing way to explore zodiac compatibility.
+3. **UX Designer**: Interested in the design and functionality of web applications focused on user interaction.
+
+## Design Elements
+- **Color Scheme**: Reflects zodiac themes with starry and celestial aesthetics.
+- **Typography**: Easy-to-read, elegant font to ensure a pleasant user experience.
+- **Interactive Elements**: Zodiac selection wheel and dynamic result display.
+
+## User Flow
+1. User lands on the homepage.
+2. User selects their zodiac sign or two signs for direct comparison.
+3. User views compatibility results and engages with the content.
+4. User toggles between light and dark mode as per preference.
+
+## Task Flow
+1. **Checking Compatibility**:
+   - Select a zodiac sign.
+   - View the compatibility results.
+2. **Direct Compatibility Check**:
+   - Select two zodiac signs.
+   - View direct compatibility results.
+3. **Theme Toggle**:
+   - Click the toggle switch.
+   - View the theme change instantly.
+
+## Usability Testing
+Five users participated in testing the application. They found the interface intuitive and engaging. Suggestions included adding more detailed descriptions for each zodiac sign and improving the mobile responsiveness of the zodiac selection wheel.
+
+## Deployment
+The project was deployed on GitHub Pages:
+1. Pushed the complete project to a GitHub repository.
+2. Navigated to the repository settings and enabled GitHub Pages for the main branch.
+3. Accessed the deployed site via the provided GitHub Pages URL.
 
 ## Contributing
-Contributions to enhance this project are welcome. Feel free to fork the repo and submit pull requests.
+Contributions are welcome. Feel free to fork the repo and submit pull requests.
 
 ## License
-This project is open-source and available under the [MIT License](LICENSE.md).
+Open-source under the [MIT License](LICENSE.md).
 
 ## Acknowledgments
 - Bootstrap for the responsive framework.
@@ -66,4 +112,3 @@ This project is open-source and available under the [MIT License](LICENSE.md).
 
 ## Contact
 Created by [Igor](https://github.com/igordinuzzi) - feel free to contact me!
-
