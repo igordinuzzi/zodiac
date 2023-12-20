@@ -77,6 +77,31 @@ As a student, this project was a valuable learning experience in web development
 3. **UX Designer**: Interested in the design and functionality of web applications focused on user interaction.
 
 ## Design Elements
+```css
+:root {
+    /* Color palette */
+    --primary-text-color: #60423A;
+    --dark-text-color: #F7ECE4;
+    --background-color-dark: #60423A;
+    --background-color-light: #F7ECE4;
+    --button-primary-bg: #60423A;
+    --button-primary-hover: #3F2A26;
+    --button-primary-bg-dark-mode: #F7ECE4;
+    --buton-primary-bg-dark-hover: #DDC6B8;
+    --button-primary-text-dark-mode: #282c35;
+    --theme-switch-bg: #ccc;
+    --slider-bg: #282c35;
+    --slider-bg-checked: #282c35;
+    --slider-bg-unchecked: #F7ECE4;
+    --slider-knob-bg: #F7ECE4;
+    --icon-color: #60423A;
+    --icon-moon-color: #60423A;
+    --font-family: 'Noto Serif', serif;
+
+    /* Border radius */
+    --border-radius: 0.5rem;
+}
+```
 ![wireframes](doc/wireframe-01.jpg)
 ![wireframes](doc/wireframe-02.jpg)
 ![palette](doc/palette.jpg)
