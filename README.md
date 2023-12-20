@@ -24,11 +24,17 @@
 ## Introduction
 Welcome to the "Zodiac Compatibility Test" project! This interactive web application lets users check their zodiac compatibility with others in a fun and engaging way.
 
+![mockup](doc/mockup.jpg)
+
 ## Features
 - **Compatibility Test**: Users can select their zodiac sign to find out which signs they are most and least compatible with.
+![feature 1](doc/feature-01.jpg)
 - **Direct Compatibility Check**: Allows users to select two zodiac signs and directly check their compatibility.
+![feature 2](doc/feature-02.jpg)
 - **Theme Switch**: A light and dark mode toggle for user convenience.
+![feature 3](doc/feature-03.jpg)
 - **Responsive Design**: The application is built using Bootstrap, ensuring a responsive layout on various devices.
+![feature 4](doc/feature-04.jpg)
 
 ## Main Components
 1. **Event Listeners**: Sets up event listeners that trigger functions for user actions.
@@ -36,6 +42,7 @@ Welcome to the "Zodiac Compatibility Test" project! This interactive web applica
 3. **Dynamic Content Update**: Dynamically updates the webpage content based on user interactions.
 
 ## Key Functions
+![code](doc/code.jpg)
 1. **`checkCompatibility()`**: Retrieves user's selected sign and updates compatibility results.
 2. **`displayResults(category, sign)`**: Helper function to update text and images for compatibility results.
 3. **`checkDirectCompatibility()`**: Checks the compatibility between two selected zodiac signs.
@@ -70,6 +77,9 @@ As a student, this project was a valuable learning experience in web development
 3. **UX Designer**: Interested in the design and functionality of web applications focused on user interaction.
 
 ## Design Elements
+![wireframes](doc/wireframe-01.jpg)
+![wireframes](doc/wireframe-02.jpg)
+![palette](doc/palette.jpg)
 - **Color Scheme**: Reflects zodiac themes with starry and celestial aesthetics.
 - **Typography**: Easy-to-read, elegant font to ensure a pleasant user experience.
 - **Interactive Elements**: Zodiac selection wheel and dynamic result display.
